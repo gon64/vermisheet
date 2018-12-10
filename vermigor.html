@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <title>Vermigor - Hoja de personaje</title>
+    </head>
+    <body class="bg-dark">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <form>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group row">
+                            <label for="personaje" class="col-2 col-form-label">Personaje: </label>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="personaje" />
+                            </div>
+                            <label for="jugador" class="col-2 col-form-label">Jugador: </label>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="jugador" />
+                            </div>
+                            <label for="clase" class="col-2 col-form-label">Clase: </label>
+                            <div class="col-10">
+                                <select id="clase" class="form-control">
+                                    <option selected>Choose...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <label for="alineamiento" class="col-2 col-form-label">Alineamiento: </label>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="alineamiento" />
+                            </div>
+                            <label for="aspecto" class="col-2 col-form-label">Aspecto: </label>
+                            <div class="col-10">
+                                <input type="text" class="form-control" id="aspecto" />
+                            </div>
+                            <label for="edad" class="col-2 col-form-label">Edad: </label>
+                            <div class="col-3">
+                                <input type="text" class="form-control" id="edad" />
+                            </div>
+                            <label for="sexo" class="col-1 col-form-label">Sexo: </label>
+                            <div class="col-3">
+                                    <input type="text" class="form-control" id="sexo" />
+                            </div>
+                            <label for="nivel" class="col-1 col-form-label">Nivel: </label>
+                            <div class="col-2">
+                                    <input type="number" class="form-control" id="nivel" min="1" value ="1" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <img src="https://www.holocubierta.com/images/iconcategories/vermigor_logo.png" class="mx-auto d-block"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <h2 class="text-center">Tiradas de Salvación</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="col-1">Puntuación</th>
+                                        <th scope="col" class="col-10"></th>
+                                        <th scope="col" class="col-1">Modificador</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="number" class="form-control" id="puntuacionSalvacionVen"/></td>
+                                        <td>Veneno o Muerte</td>
+                                        <td><input type="number" class="form-control" id="modificadorSalvacionVen"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="form-control" id="puntuacionSalvacionVar"/></td>
+                                        <td>Varita Mágica</td>
+                                        <td><input type="number" class="form-control" id="modificadorSalvacionVar"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="form-control" id="puntuacionSalvacionPet"/></td>
+                                        <td>Petrificación y Parálisis</td>
+                                        <td><input type="number" class="form-control" id="modificadorSalvacionPet"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="form-control" id="puntuacionSalvacionArm"/></td>
+                                        <td>Arma de Aliento</td>
+                                        <td><input type="number" class="form-control" id="modificadorSalvacionArm"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="number" class="form-control" id="puntuacionSalvacionCon"/></td>
+                                        <td>Conjuro, Vara o Cetro</td>
+                                        <td><input type="number" class="form-control" id="modificadorSalvacionCon"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2 class="text-center">Ataque</h2>
+                        <div class="row">
+                            <div class="form-group row">
+                                <label for="ataque" class="col-2 col-form-label">Ataque</label>
+                                <div class="col-2">
+                                    <input type="number" class="form-control form-control-lg" id="ataque" />
+                                </div>
+                                    <label for="cac" class="col-6 col-form-label">Cuerpo a Cuerpo (+FUE): </label>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" id="cac" />
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <label for="pro" class="col-6 col-form-label">Proyectiles (+DES): </label>
+                                    <div class="col-2">
+                                        <input type="text" class="form-control" id="pro" />
+                                    </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center">Clase de Armadura</h2>
+                        <div class="row">
+                            <div class="form-group row">
+                                <label for="ataque" class="col-2 col-form-label">CA</label>
+                                <div class="col-2">
+                                    <input type="number" class="form-control form-control-lg" id="ca" />
+                                </div>
+                                    <label for="tipoca" class="col-2 col-form-label">Tipo: </label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="tipoca" />
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <label for="escudo" class="col-2 col-form-label">Escudo: </label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="escudo" />
+                                    </div>
+                                    <div class="col-4"></div>
+                                    <label for="escudo" class="col-2 col-form-label">Otros: </label>
+                                    <div class="col-6">
+                                        <input type="text" class="form-control" id="otros" />
+                                    </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center">Armas</h2>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Arma</th>
+                                                    <th scope="col">Ataque</th>
+                                                    <th scope="col">Daño</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center">Equipo</h2>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="col-2"></th>
+                                                    <th class="col-1">Peso</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><input type="text" class="form-control"></td>
+                                                    <td><input type="text" class="form-control"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-5">
+                        <h2 class="text-center">Características</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="col-3"></th>
+                                        <th scope="col" class="col-1">Puntuación</th>
+                                        <th scope="col" class="col-1">Modificador</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fuerza</td>
+                                        <td><input type="number" class="form-control" id="puntuacionFuerza"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorFuerza"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Destreza</td>
+                                        <td><input type="number" class="form-control" id="puntuacionDestreza"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorDestreza"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Constitución</td>
+                                        <td><input type="number" class="form-control" id="puntuacionConstitucion"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorConstitucion"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Inteligencia</td>
+                                        <td><input type="number" class="form-control" id="puntuacionInteligencia"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorInteligencia"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sabiduría</td>
+                                        <td><input type="number" class="form-control" id="puntuacionSabiduria"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorSabiduria"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Carisma</td>
+                                        <td><input type="number" class="form-control" id="puntuacionCarisma"/></td>
+                                        <td><input type="number" class="form-control" id="modificadorCarisma"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <h2 class="text-center">Habilidades</h2>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">Clase</th>
+                                        <th scope="col">Base</th>
+                                        <th scope="col">Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Acrobacias</td>
+                                        <td>DES</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Atletismo</td>
+                                        <td>DES</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Ciencia Mágica</td>
+                                        <td>INT</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Encanto</td>
+                                        <td>CAR</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Erudición</td>
+                                        <td>INT</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Interpretación</td>
+                                        <td>CAR</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Naturaleza</td>
+                                        <td>SAB</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Latrocinio</td>
+                                        <td>DES</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Ocultismo</td>
+                                        <td>INT</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Oficio</td>
+                                        <td>SAB</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Percepción</td>
+                                        <td>SAB</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Religión</td>
+                                        <td>SAB</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Sanación</td>
+                                        <td>SAB</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Sigilo</td>
+                                        <td>DES</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="form-check"><input type="checkbox" class="form-check-input" id="exampleCheck1"></div></td>
+                                        <td>Viaje</td>
+                                        <td>INT</td>
+                                        <td><input type="number" class="form-control" id="totalAcrobacias"/></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                    <div class="col-2">
+                        <img src="descarga.svg" alt="..." class="img-thumbnail">
+                        <h2 class="text-center">Movimiento</h2>
+                        <div class="row">
+                            <div class="form-group row">
+                                <label for="base" class="col-7 col-form-label">Base</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="base" />
+                                </div>
+                                <label for="carrera" class="col-7 col-form-label">Carrera (x3)</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="carrera" />
+                                </div>
+                                <label for="actual" class="col-7 col-form-label">Actual</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="actual" />
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center">Carga</h2>
+                        <div class="row">
+                            <div class="form-group row">
+                                <label for="base" class="col-7 col-form-label">Sobrecargado</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="sobrecargado" />
+                                </div>
+                                <label for="carrera" class="col-7 col-form-label">Carga máxima</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="cargamaxima" />
+                                </div>
+                                <label for="actual" class="col-7 col-form-label">Carga Actual</label>
+                                <div class="col-sm-5">
+                                    <input type="number" class="form-control" id="cargaactual" />
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="text-center">Ptos. de Golpe</h2>
+                        <div class="row">
+                            <label for="pgtotales" class="col-7 col-form-label">Totales</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" id="pgtotales" />
+                            </div>
+                            <label for="pgheridas" class="col-7 col-form-label">Heridas</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" id="heridas" />
+                            </div>
+                        </div>
+                        <h2 class="text-center">Ptos. de Cordura</h2>
+                        <div class="row">
+                            <label for="pctotales" class="col-7 col-form-label">Totales</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" id="pctotales" />
+                            </div>
+                            <label for="pctotales" class="col-7 col-form-label">Actuales</label>
+                            <div class="col-sm-5">
+                                <input type="number" class="form-control" id="pctotales" />
+                            </div>
+                        </div>
+                        <h2 class="text-center">Idiomas</h2>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+                        <input type="text" class="form-control"/>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
